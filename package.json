@@ -1,0 +1,25 @@
+{
+  "name": "cucumber-selenium-browserstack-demo",
+  "version": "0.1.0",
+  "readme": "Cucumber-JS Integration with selenium web driver and BrowserStack",
+  "description": "Cucumber-JS Integration with selenium web driver and BrowserStack",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "test": "npm run single && npm run local && npm run parallel",
+    "single": "CONFIG_FILE=single ./node_modules/cucumber/bin/cucumber.js features/login.feature",
+    "local": "CONFIG_FILE=local ./node_modules/cucumber/bin/cucumber.js features/login.feature",
+    "parallel": "CONFIG_FILE=parallel ./scripts/cucumber-runner.js features/login.feature"
+  },
+  "author": "Prasanjit Mohanty",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cucumber": "*",
+    "selenium-webdriver": "^2.53.2"
+  },
+  "dependencies": {
+    "browserstack-local": "^1.0.0"
+  }
+}
